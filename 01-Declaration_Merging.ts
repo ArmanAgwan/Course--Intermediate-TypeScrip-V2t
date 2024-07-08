@@ -43,7 +43,7 @@
              
         //----------Namespaces----------//
 
- /*   
+    
 // a `fetch` kind of function
 $.ajax({
     url: "/api/getWeather",
@@ -59,7 +59,6 @@ $.ajax({
   $("h1.title").forEach((node) => {
     node.tagName // "h1"
            
-  (property) Element.tagName: string
   })   
   
   
@@ -75,5 +74,32 @@ $.ajax({
       return Promise.resolve()
     }
   }
-   */        
+      
+  
+
+          //----------Classes----------//
+
+  
+  class Fruit {
+    name?: string
+    mass?: number
+    color?: string
+    static createBanana(): Fruit {
+      return { name: "banana", color: "yellow", mass: 183 }
+    }
+  }
+  
+  
+  // how to test for a value
+  const valueTest = Fruit // Fruit is a value!
+  valueTest.createBanana
+             
+  
+   
+  // how to test for a type
+  let typeTest: Fruit = {} as any // Fruit is a type!
+  typeTest.color
+    
+  
+
            
