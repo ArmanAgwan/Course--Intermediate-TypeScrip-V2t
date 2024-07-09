@@ -10,6 +10,7 @@
 
 
 /*
+
 let val: object = { status: "ok" }
 val = "foo"
 // Type 'string' is not assignable to type 'object'.
@@ -32,6 +33,7 @@ let response:
       = { success: "ok", data: [] }
  
 val = response
+
 */
 
 
