@@ -1,5 +1,5 @@
 
-                //----------Optional Chaining ?----------//
+//----------Optional Chaining ?----------//
 
 // A less hazardous tool, relative to the non-null assertion operator is optional chaining.  
 
@@ -48,8 +48,56 @@ function getLastPayment(data: ResponseData): number | undefined {
 }
 
 
+getLastPayment({
+    customer: {
+        id: "0123",
+        lastInvoice: {
+            id: "123",
+            due: 12,
+            createdAt: new Date(),
+            lastPayment: {
+                id: "65",
+                amount: 45,
+                createdAt: new Date(),
+            },
+            payments: [
+                {
+                    id: "345",
+                    amount: 478,
+                    createdAt: new Date(),
+                }
+            ]
+
+
+        },
+
+
+        invoices: [
+            {
+                id: "123",
+                due: 12,
+                createdAt: new Date(),
+                lastPayment: {
+                    id: "65",
+                    amount: 45,
+                    createdAt: new Date(),
+                },
+                payments: [
+                    {
+                        id: "345",
+                        amount: 478,
+                        createdAt: new Date(),
+                    }
+                ]
+
+            }
+        ]
+    }
+})
+
+
 /*
-All this, just to sort of drill down and find something if it’s there. Optional 
+All this, just to sort of drill down and find something if it’s there. Optional
 chaining gives us a more concise way to do this
 */
 
@@ -62,7 +110,7 @@ function getLastPayment(data: ResponseData): number | undefined {
 
 
 /*
-Behind the scenes, what’s happening here is very similar to the more lengthy version of 
+Behind the scenes, what’s happening here is very similar to the more lengthy version of
 this function that we wrote above. Here’s the compiled output (target: ES2017)
 */
 
@@ -78,7 +126,7 @@ function getLastPayment(data) {
 
 
 
-            //----------Nullish Coalescing ??----------//
+//----------Nullish Coalescing ??----------//
 
 
 /*

@@ -27,7 +27,7 @@ class ThingWithAsyncSetup {
     }
   }
 
-
+ 
 
 /*  
 TypeScript is warning me that someone could create an instance of this class and 
@@ -37,7 +37,7 @@ immediately attempt to access .isSetup before it gets a boolean value
 
 let myThing = new ThingWithAsyncSetup()
 myThing.isSetup // what if this isn't assigned yet?
-          
+ console.log(myThing.isSetup)         
 // (property) ThingWithAsyncSetup.isSetup: boolean
 
 
