@@ -4,6 +4,7 @@
 // A less hazardous tool, relative to the non-null assertion operator is optional chaining.  
 
 
+/*
 
 type Payment = {
     id: string
@@ -27,12 +28,15 @@ type ResponseData = {
     customer?: Customer
 }
 
+*/
+
 
 /*
 So, we can have one or many Customers, each of which may have one or more Invoices, 
 each of which may have one or more Payments.
 */
 
+/*
 
 function getLastPayment(data: ResponseData): number | undefined {
     const { customer } = data;
@@ -47,7 +51,10 @@ function getLastPayment(data: ResponseData): number | undefined {
     return lastPayment.amount;
 }
 
+*/
 
+
+/*
 getLastPayment({
     customer: {
         id: "0123",
@@ -94,6 +101,8 @@ getLastPayment({
         ]
     }
 })
+
+*/
 
 
 /*
